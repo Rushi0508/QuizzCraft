@@ -44,7 +44,11 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Services\IService1.cs" />
+    <Compile Include="Services\IQuestionService.cs" />
+    <Compile Include="Services\IQuizAttempt.cs" />
+    <Compile Include="Services\IQuizService.cs" />
+    <Compile Include="Services\IUserAnswer.cs" />
+    <Compile Include="Services\IUserService.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\Quiz.cs" />
     <Compile Include="Models\QuizAttempt.cs" />
