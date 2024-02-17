@@ -1,4 +1,5 @@
-﻿using QuizzCraft.Models;
+﻿using QuizzCraft;
+using QuizzCraft.Models;
 using QuizzCraft.Services;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,12 @@ namespace QuizCraft
 
     public class QuizService : IQuizService
     {
+        private readonly QuizzContext quizzContext;
+
+        public QuizService()
+        {
+            this.quizzContext = new QuizzContext();
+        }
         public Quiz GetQuizById(int quizId)
         {
             // Implement logic to retrieve a quiz by ID from the database
@@ -29,7 +36,9 @@ namespace QuizCraft
         public void AddQuiz(Quiz quiz)
         {
             // Implement logic to add a new quiz to the database
-            throw new NotImplementedException();
+
+            quizzContext.Quizzes.Add(quiz);
+            quizzContext.SaveChanges();
         }
 
         public void UpdateQuiz(Quiz quiz)

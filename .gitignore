@@ -16,6 +16,11 @@
 # Mono auto generated files
 mono_crash.*
 
+
+
+# Database Migrations 
+Migrations
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/

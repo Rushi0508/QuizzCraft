@@ -70,27 +70,79 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202402151108064_InitialCreate.cs" />
+    <Compile Include="Migrations\202402151108064_InitialCreate.designer.cs">
+      <DependentUpon>202402151108064_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402151132132_user-question.cs" />
+    <Compile Include="Migrations\202402151132132_user-question.designer.cs">
+      <DependentUpon>202402151132132_user-question.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402151554155_question-list.cs" />
+    <Compile Include="Migrations\202402151554155_question-list.designer.cs">
+      <DependentUpon>202402151554155_question-list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402151601531_question-icol.cs" />
+    <Compile Include="Migrations\202402151601531_question-icol.designer.cs">
+      <DependentUpon>202402151601531_question-icol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402170718199_Option added.cs" />
+    <Compile Include="Migrations\202402170718199_Option added.designer.cs">
+      <DependentUpon>202402170718199_Option added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402170842495_choreOption.cs" />
+    <Compile Include="Migrations\202402170842495_choreOption.designer.cs">
+      <DependentUpon>202402170842495_choreOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402170918362_Quiz.cs" />
+    <Compile Include="Migrations\202402170918362_Quiz.designer.cs">
+      <DependentUpon>202402170918362_Quiz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="QuizzContext.cs" />
+    <Compile Include="Services\IOptionService.cs" />
+    <Compile Include="Services\OptionService.cs" />
     <Compile Include="Services\QuestionService.cs" />
     <Compile Include="Services\IQuestionService.cs" />
     <Compile Include="Services\QuizAttemptService.cs" />
     <Compile Include="Services\IQuizAttemptService.cs" />
     <Compile Include="Services\QuizService.cs" />
     <Compile Include="Services\IQuizService.cs" />
-    <Compile Include="Services\UserAnswerService.cs" />
-    <Compile Include="Services\IUserAnswerService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Services\IUserService.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\Quiz.cs" />
     <Compile Include="Models\QuizAttempt.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Models\UserAnswer.cs" />
+    <Compile Include="Models\Option.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202402151108064_InitialCreate.resx">
+      <DependentUpon>202402151108064_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402151132132_user-question.resx">
+      <DependentUpon>202402151132132_user-question.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402151554155_question-list.resx">
+      <DependentUpon>202402151554155_question-list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402151601531_question-icol.resx">
+      <DependentUpon>202402151601531_question-icol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402170718199_Option added.resx">
+      <DependentUpon>202402170718199_Option added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402170842495_choreOption.resx">
+      <DependentUpon>202402170842495_choreOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402170918362_Quiz.resx">
+      <DependentUpon>202402170918362_Quiz.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
