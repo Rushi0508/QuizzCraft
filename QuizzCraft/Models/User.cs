@@ -18,11 +18,11 @@ namespace QuizzCraft.Models
 
         [DataMember]
         public string Password { get; set; }
-
+/*
         [DataMember]
         public int AttemptedQuizzes { get; set; }
 
         [DataMember]
-        public int Points { get; set; }
+        public int Points { get; set; }*/
     }
 }

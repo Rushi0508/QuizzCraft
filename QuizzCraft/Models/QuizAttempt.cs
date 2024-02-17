@@ -4,6 +4,7 @@ using System.Runtime.Serialization;
 
 namespace QuizzCraft.Models
 {
+    [DataContract]
     public class QuizAttempt
     {
         [DataMember]
@@ -31,6 +32,6 @@ namespace QuizzCraft.Models
         public User User { get; set; }
 
         [DataMember]
-        public ICollection<UserAnswer> UserAnswers { get; set; }
+        public ICollection<Option> UserAnswers { get; set; }
     }
 }

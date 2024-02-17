@@ -5,6 +5,7 @@ using System.ServiceModel;
 using BCrypt;
 using System.Text.RegularExpressions;
 using System.Security.Principal;
+using System.Linq;
 
 namespace QuizCraft
 {
@@ -21,13 +22,14 @@ namespace QuizCraft
         public QuizzCraft.Models.User GetUserById(int userId)
         {
             // Implement logic to retrieve user by ID from the database
-            throw new NotImplementedException();
+            return quizzContext.Users.FirstOrDefault(u => u.UserId== userId);
+
         }
 
         public QuizzCraft.Models.User GetUserByEmail(string email)
         {
             // Implement logic to retrieve user by email from the database
-            throw new NotImplementedException();
+            return quizzContext.Users.FirstOrDefault(u => u.Email == email);
         }
         private bool UserExists(string email)
         {
@@ -78,10 +80,9 @@ namespace QuizCraft
 
             user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password, 10);  
 
-            Console.WriteLine(user.Email);  
-
             quizzContext.Users.Add(user);
             quizzContext.SaveChanges();
+
             return;
 
         }

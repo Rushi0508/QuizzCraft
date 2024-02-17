@@ -17,15 +17,12 @@ namespace QuizzCraft.Models
         public string Title { get; set; }
 
         [DataMember]
-        public string Description { get; set; }
-
-        [DataMember]
         public DateTime CreatedAt { get; set; }
 
-        [DataMember]
+        /*[DataMember]
         public User Creator { get; set; }
 
         [DataMember]
-        public ICollection<Question> Questions { get; set; }
+        public ICollection<Question> Questions { get; set; }*/
     }
 }
