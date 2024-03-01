@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,8 +22,8 @@ namespace QuizzCraft
         public QuizzContext() : base("QuizzConnection")
         {
             /*Database.SetInitializer(new DropCreateDatabaseIfModelChanges<QuizzContext>()); // to sync table structure and model class*/
-           /* Database.SetInitializer(new DropCreateDatabaseAlways<QuizzContext>()); // to sync table structure and model class*/
+            /* Database.SetInitializer(new DropCreateDatabaseAlways<QuizzContext>()); // to sync table structure and model class*/
         }
-
+        
     }
 }

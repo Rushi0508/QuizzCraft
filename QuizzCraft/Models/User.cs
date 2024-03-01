@@ -1,4 +1,6 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.Serialization;
 
 
 namespace QuizzCraft.Models
@@ -18,7 +20,10 @@ namespace QuizzCraft.Models
 
         [DataMember]
         public string Password { get; set; }
-/*
+
+        public ICollection<Quiz> AttemptedQuizzes { get; set; }
+
+        /*
         [DataMember]
         public int AttemptedQuizzes { get; set; }
 

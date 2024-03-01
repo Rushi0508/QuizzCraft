@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace QuizCraft
 {
-
+    [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
     public class QuestionService : IQuestionService
     {
 
@@ -17,7 +17,6 @@ namespace QuizCraft
         {
             quizzContext = new QuizzContext(); // Initialize QuizzContext
         }
-
         public Question GetQuestionById(int questionId)
         {
             // Implement logic to retrieve a question by ID from the database
@@ -27,32 +26,23 @@ namespace QuizCraft
         public List<Question> GetQuestionsByQuiz(int quizId)
         {
             // Implement logic to retrieve questions by quiz ID from the database
-            throw new NotImplementedException();
+            
+            var questionsByQuiz = quizzContext.Questions.Where(q => q.QuizId == quizId).ToList();
+
+            return questionsByQuiz;
         }
 
-        public string AddQuestion(QuizzCraft.Models.Question question)
+        public string AddQuestion(QuizzCraft.Models.Question question, QuizzCraft.Models.Option option)
         {
             // Implement logic to add a new question to the database
-            
-            Question question1 = new Question();
 
-            question1.CorrectAnswer = question.CorrectAnswer;
-            question1.QuestionText = question.QuestionText;
+            question.QuizId =  1;// Id from created Quizz 
+            question.Option = option;
 
-            // Initialize Options collection if it's not initialized yet
-            question1.Options = new List<string>();
-
-            // Add options to the collection
-            foreach (var option in question.Options)
-            {
-                question1.Options.Add(option);
-            }
-
-
-            quizzContext.Questions.Add(question1);
+            quizzContext.Questions.Add(question);
             quizzContext.SaveChanges();
 
-            return "Done Man";
+            return "Done";
         }
 
         public void UpdateQuestion(Question question)
@@ -64,7 +54,22 @@ namespace QuizCraft
         public void DeleteQuestion(int questionId)
         {
             // Implement logic to delete a question from the database
-            throw new NotImplementedException();
+
+            var questionToDelete = quizzContext.Questions.Include("Option").FirstOrDefault(q => q.QuestionID == questionId);
+
+            if (questionToDelete != null)
+            {
+                // Remove the associated option first
+                
+                quizzContext.Options.Remove(questionToDelete.Option);
+                
+
+                // Then remove the question itself
+                quizzContext.Questions.Remove(questionToDelete);
+
+                quizzContext.SaveChanges(); // Save changes to the database
+            }
+
         }
     }
 }

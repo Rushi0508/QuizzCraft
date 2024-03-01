@@ -37,15 +37,15 @@ namespace QuizCraft
             // Replace this with logic to check if a user with the given email exists in your database
         }
 
-        private int GenerateUniqueUserId()
-        {
-            // Replace this with logic to generate a unique user ID based on your database
-            // For simplicity, this example just returns a random number (not suitable for production)
-            return new Random().Next(1000, 9999);
-        }
-
         public void AddUser(QuizzCraft.Models.User user)
         {
+            user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password, 10);
+
+            quizzContext.Users.Add(user);
+            quizzContext.SaveChanges();
+
+            return;
+
             /*if (user == null)
             {
                 throw new ArgumentNullException(nameof(user), "User cannot be null.");
@@ -76,26 +76,13 @@ namespace QuizCraft
                 throw new InvalidOperationException("User with the same email already exists.");
             }
 
-            user.UserId = GenerateUniqueUserId();*/
-
-            user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password, 10);  
-
-            quizzContext.Users.Add(user);
-            quizzContext.SaveChanges();
-
-            return;
+            */
 
         }
 
         public void UpdateUser(QuizzCraft.Models.User user)
         {
             // Implement logic to update user information in the database
-            throw new NotImplementedException();
-        }
-
-        public void DeleteUser(int userId)
-        {
-            // Implement logic to delete a user from the database
             throw new NotImplementedException();
         }
     }

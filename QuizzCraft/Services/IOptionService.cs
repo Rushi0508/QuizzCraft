@@ -16,7 +16,7 @@ namespace QuizzCraft.Services
 
 
         [OperationContract]
-        void AddOption(Option option);
+        int AddOption(Option option);
 
         [OperationContract]
         void UpdateOption(Option option);
