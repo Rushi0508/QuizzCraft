@@ -19,10 +19,5 @@ namespace QuizzCraft
 
         [OperationContract]
         void UpdateUser(User user);
-
-        [OperationContract]
-        void DeleteUser(int userId);
     }
-
-
 }

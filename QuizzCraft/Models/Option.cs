@@ -1,10 +1,14 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.Serialization;
 
 namespace QuizzCraft.Models
 {
     [DataContract]
     public class Option
     {
+        
         [DataMember]
         public int OptionID { get; set; }
 
@@ -20,10 +24,5 @@ namespace QuizzCraft.Models
         [DataMember]
         public string OptionD { get; set; }
 
-
-    /*
-        [DataMember]
-        public Question Question { get; set; }
-    */
     }
 }

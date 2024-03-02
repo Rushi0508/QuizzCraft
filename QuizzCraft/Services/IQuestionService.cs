@@ -16,7 +16,7 @@ namespace QuizzCraft.Services
         List<Question> GetQuestionsByQuiz(int quizId);
 
         [OperationContract]
-        string AddQuestion(Question question);
+        string AddQuestion(Question question, Option option);
 
         [OperationContract]
         void UpdateQuestion(Question question);
