@@ -24,7 +24,7 @@ BCrypt.Net-Next
 ```
 
 
-### 3. For DataBase Migration 
+### 3. For DataBase Migration (If require then use otherwise it is created automatically)
 > First time only to Enable Migration
 ```
 Enable-migration 
@@ -39,9 +39,9 @@ update-database
 
 | Application        | Tech                  |
 | ------------------ | --------------------- |
-| Backend            |                       |
-| Host               |                       |
-| Frontend           |                       |
+| Backend            |  SOAP Services         |
+| Host               |  Windows Form         |
+| Frontend           |  WebForms (BootStap)  |
 | DataBase           | SQL (SSMS)            |
 
 > Team members
@@ -52,7 +52,7 @@ update-database
         <a href="https://github.com/Rushi0508/QuizzCraft/graphs/contributors">
             <img src="https://github.com/Rushi0508.png" width="100px;" alt=""/>
             <br />
-            <sub><b>Rush-Gandhi</b></sub>
+            <sub><b>Rushi-Gandhi</b></sub>
         </a>
         <br />
     </td>

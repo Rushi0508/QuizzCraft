@@ -1,0 +1,44 @@
+﻿ /* Style for the myquiz grid */
+.myquiz-grid {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    color:coral;
+}
+
+/* Style for each quiz card */
+.quiz-card {
+    display: inline-block; /* Display cards side by side */
+    width: calc(33.33% - 20px); /* Adjust the width as needed */
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    vertical-align: top; /* Align the top of the cards */
+}
+
+
+
+.deleteButton {
+    color: white;
+    background-color: red;
+}
+
+.updateButton {
+    color: white;
+    background-color: blue;
+}
+
+.addButton {
+    color: white;
+    background-color: green;
+}
+
+.showButton {
+    color: black;
+    background-color: yellow;
+}
+
