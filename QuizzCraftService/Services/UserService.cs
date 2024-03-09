@@ -37,5 +37,79 @@ namespace QuizzCraftService.Services
                 return ex.ToString();
             }
         }
+
+        public User GetUserByEmail(string email)
+        {
+            try
+            {
+                using (var qc = new QuizzDbContext())
+                {
+                    User user = qc.Users.FirstOrDefault(u => u.Email == email);
+
+                    // If possible, Remove password from teacher 
+
+                    return user;
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+
+                return null;
+            }
+        }
+
+        public User GetUserById(int id)
+        {
+            try
+            {
+                using (var qc = new QuizzDbContext())
+                {
+                    User user = qc.Users.FirstOrDefault(u => u.UserId == id);
+
+                    // If possible, Remove password from user
+
+                    return user;
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+
+                return null;
+            }
+        }
+
+        // Assuming that after checking exsistance of mail we do verification 
+        public User VerifyUser(string email, string ePassword)
+        {
+            try
+            {
+                using (var qc = new QuizzDbContext())
+                {
+                    User user = qc.Users.FirstOrDefault(u => u.Email == email);
+
+                    bool isPasswordCorrect = BCrypt.Net.BCrypt.Verify(ePassword, user.Password);
+
+                    if (isPasswordCorrect)
+                    {
+                        return user;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+
+                return null;
+            }
+        }
+
+
     }
 }

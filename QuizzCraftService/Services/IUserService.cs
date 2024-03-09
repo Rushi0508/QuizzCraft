@@ -14,5 +14,14 @@ namespace QuizzCraftService.Services
         [OperationContract]
         string AddUser(User user);
 
+        [OperationContract]
+        User GetUserByEmail(string email);
+
+        [OperationContract]
+        User VerifyUser(string email, string password);
+
+        [OperationContract]
+        User GetUserById(int id);
+
     }
 }
