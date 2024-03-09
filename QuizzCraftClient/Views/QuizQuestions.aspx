@@ -15,6 +15,8 @@
             <asp:BoundField DataField="OptionB" HeaderText="Option B" />
             <asp:BoundField DataField="OptionC" HeaderText="Option C" />
             <asp:BoundField DataField="OptionD" HeaderText="Option D" />
+            <asp:BoundField DataField="CorrectAnswer" HeaderText="Correct Answer" />
+
 
             <asp:TemplateField HeaderText="Actions">
                 <ItemTemplate>

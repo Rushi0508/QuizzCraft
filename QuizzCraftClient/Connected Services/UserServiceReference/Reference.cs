@@ -147,6 +147,24 @@ namespace QuizzCraftClient.UserServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/AddUser", ReplyAction="http://tempuri.org/IUserService/AddUserResponse")]
         System.Threading.Tasks.Task<string> AddUserAsync(QuizzCraftClient.UserServiceReference.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserByEmail", ReplyAction="http://tempuri.org/IUserService/GetUserByEmailResponse")]
+        QuizzCraftClient.UserServiceReference.User GetUserByEmail(string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserByEmail", ReplyAction="http://tempuri.org/IUserService/GetUserByEmailResponse")]
+        System.Threading.Tasks.Task<QuizzCraftClient.UserServiceReference.User> GetUserByEmailAsync(string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/VerifyUser", ReplyAction="http://tempuri.org/IUserService/VerifyUserResponse")]
+        QuizzCraftClient.UserServiceReference.User VerifyUser(string email, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/VerifyUser", ReplyAction="http://tempuri.org/IUserService/VerifyUserResponse")]
+        System.Threading.Tasks.Task<QuizzCraftClient.UserServiceReference.User> VerifyUserAsync(string email, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserById", ReplyAction="http://tempuri.org/IUserService/GetUserByIdResponse")]
+        QuizzCraftClient.UserServiceReference.User GetUserById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserById", ReplyAction="http://tempuri.org/IUserService/GetUserByIdResponse")]
+        System.Threading.Tasks.Task<QuizzCraftClient.UserServiceReference.User> GetUserByIdAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -182,6 +200,30 @@ namespace QuizzCraftClient.UserServiceReference {
         
         public System.Threading.Tasks.Task<string> AddUserAsync(QuizzCraftClient.UserServiceReference.User user) {
             return base.Channel.AddUserAsync(user);
+        }
+        
+        public QuizzCraftClient.UserServiceReference.User GetUserByEmail(string email) {
+            return base.Channel.GetUserByEmail(email);
+        }
+        
+        public System.Threading.Tasks.Task<QuizzCraftClient.UserServiceReference.User> GetUserByEmailAsync(string email) {
+            return base.Channel.GetUserByEmailAsync(email);
+        }
+        
+        public QuizzCraftClient.UserServiceReference.User VerifyUser(string email, string password) {
+            return base.Channel.VerifyUser(email, password);
+        }
+        
+        public System.Threading.Tasks.Task<QuizzCraftClient.UserServiceReference.User> VerifyUserAsync(string email, string password) {
+            return base.Channel.VerifyUserAsync(email, password);
+        }
+        
+        public QuizzCraftClient.UserServiceReference.User GetUserById(int id) {
+            return base.Channel.GetUserById(id);
+        }
+        
+        public System.Threading.Tasks.Task<QuizzCraftClient.UserServiceReference.User> GetUserByIdAsync(int id) {
+            return base.Channel.GetUserByIdAsync(id);
         }
     }
 }

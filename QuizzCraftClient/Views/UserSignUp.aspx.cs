@@ -13,6 +13,9 @@ namespace QuizzCraftClient.Views
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            lblSignUpSuccessfull.Text = "";
+            lblSignUpError.Text = "";
+            lblConfirmPassword.Text = "";
         }
 
         
@@ -21,6 +24,7 @@ namespace QuizzCraftClient.Views
             string name = tbName.Text;
             string email = tbEmail.Text;
             string password = tbPassword.Text;
+            string cpassword = tbConfirmPassword.Text;
 
             UserServiceReference.UserServiceClient uc = new UserServiceReference.UserServiceClient("NetTcpBinding_IUserService");
             User u = new User();
@@ -30,7 +34,24 @@ namespace QuizzCraftClient.Views
             u.Points = 0;
             u.AttemptedQuizzes = 0;
 
+            if (cpassword != password)
+            {
+                lblConfirmPassword.Text = "Confirm Password Not match with Password.";
+                return;
+            }
+
+            
+            // If Teacher with same email id exsist or Not 
+            if (uc.GetUserByEmail(email) != null)
+            {
+                lblSignUpError.Text = "User with " + email + " already exist.";
+                return;
+            }
+
             string s = uc.AddUser(u);
+
+
+            s += " Your Account is created. Now You can SignIn.";
 
             lblSignUpSuccessfull.Text = s;
         }

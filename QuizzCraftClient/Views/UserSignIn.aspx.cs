@@ -16,6 +16,28 @@ namespace QuizzCraftClient.Views
 
         protected void SignInButton_Click(object sender, EventArgs e)
         {
+            string email = tbEmail.Text;
+            string password = tbPassword.Text;
+
+            UserServiceReference.UserServiceClient userServiceClient = new UserServiceReference.UserServiceClient();
+
+            // If Teacher with same email id exsist or Not 
+            if (userServiceClient.GetUserByEmail(email) == null)
+            {
+                lblSignInError.Text = "Student with " + email + " not exist.";
+                return;
+            }
+
+            if (userServiceClient.VerifyUser(email, password) == null)
+            {
+                lblSignInError.Text = "Please Check your credentials.";
+                return;
+            }
+
+            Session["email"] = email;
+            Session["role"] = "student";
+
+            Response.Redirect("~/Views/Index.aspx");
 
         }
     }
