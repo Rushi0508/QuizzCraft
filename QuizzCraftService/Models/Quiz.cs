@@ -15,6 +15,9 @@ namespace QuizzCraftService.Models
 
         [DataMember]
         public string Title { get; set; }
+        
+        [DataMember]
+        public string Subject { get; set; }
 
         [DataMember]
         public DateTime CreatedAt { get; set; }

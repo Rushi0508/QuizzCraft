@@ -29,6 +29,9 @@ namespace QuizzCraftClient.QuizServiceReference {
         private int QuizIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SubjectField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int TeacherIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -66,6 +69,19 @@ namespace QuizzCraftClient.QuizServiceReference {
                 if ((this.QuizIdField.Equals(value) != true)) {
                     this.QuizIdField = value;
                     this.RaisePropertyChanged("QuizId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Subject {
+            get {
+                return this.SubjectField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SubjectField, value) != true)) {
+                    this.SubjectField = value;
+                    this.RaisePropertyChanged("Subject");
                 }
             }
         }

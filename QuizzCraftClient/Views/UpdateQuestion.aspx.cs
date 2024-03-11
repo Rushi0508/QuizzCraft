@@ -23,7 +23,7 @@ namespace QuizzCraftClient.Views
 
                 Question question = questionServiceClient.GetQuestionById(quesid);
 
-                txtCorrectAnswer.Text = question.CorrectAnswer;
+                CorrectAnswer.Text = question.CorrectAnswer;
                 txtOptionA.Text = question.OptionA;
                 txtOptionB.Text = question.OptionB;
                 txtOptionC.Text = question.OptionC;
@@ -42,7 +42,7 @@ namespace QuizzCraftClient.Views
             int quesid = int.Parse(Request.QueryString["quesid"]);
 
             question.QuestionID = quesid;
-            question.CorrectAnswer = txtCorrectAnswer.Text;
+            question.CorrectAnswer = CorrectAnswer.Text;
             question.OptionA = txtOptionA.Text;
             question.OptionB = txtOptionB.Text;
             question.OptionC = txtOptionC.Text;

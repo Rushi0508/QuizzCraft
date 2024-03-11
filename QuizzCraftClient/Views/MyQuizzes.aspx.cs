@@ -31,8 +31,8 @@ namespace QuizzCraftClient.Views
 
         protected void btnAddQuestion_Click(object sender, EventArgs e)
         {
-            Button btnAttempt = (Button)sender;
-            int qid = int.Parse(btnAttempt.CommandArgument);
+            Button btnAdd = (Button)sender;
+            int qid = int.Parse(btnAdd.CommandArgument);
 
             Response.Redirect("~/Views/AddQuestion.aspx?qid=" + qid);
         }

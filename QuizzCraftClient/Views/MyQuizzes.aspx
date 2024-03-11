@@ -18,6 +18,7 @@
         <Columns>
             <asp:BoundField DataField="QuizId" HeaderText="Quiz Id" />
             <asp:BoundField DataField="Title" HeaderText="Quiz Title" />
+            <asp:BoundField DataField="Subject" HeaderText="Quiz Subject" />
 
             <asp:TemplateField HeaderText="Update Actions">
                 <ItemTemplate>
@@ -42,7 +43,6 @@
                     <asp:Button ID="btnAddQuestion" runat="server" Text="Add" CssClass="addButton" CommandName="" OnClick="btnAddQuestion_Click" CommandArgument='<%# Eval("QuizId") %>' />
                 </ItemTemplate>
             </asp:TemplateField>
-
 
         </Columns>
     </asp:GridView>

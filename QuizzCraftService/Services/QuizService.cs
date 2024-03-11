@@ -35,7 +35,7 @@ namespace QuizzCraftService.Services
                     qc.Quizzes.Add(quiz);
                     qc.SaveChanges();
 
-
+                    // Increment 
                     teacher.CreatedQuizzes++;
 
                     qc.Entry(teacher).State = EntityState.Modified;
@@ -171,6 +171,7 @@ namespace QuizzCraftService.Services
                     {
                         // Update the properties of the existing quiz
                         existingQuiz.Title = quiz.Title;
+                        existingQuiz.Subject = quiz.Subject;
                         // Update other properties as needed
 
                         // Save changes to the database

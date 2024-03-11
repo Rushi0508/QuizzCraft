@@ -4,6 +4,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
       <xs:element minOccurs="0" name="QuizId" type="xs:int" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TeacherId" type="xs:int" />
       <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
     </xs:sequence>

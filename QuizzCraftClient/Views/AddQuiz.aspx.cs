@@ -18,13 +18,15 @@ namespace QuizzCraftClient.Views
         protected void CreateQuizButton_Click(object sender, EventArgs e)
         {
             string title = TitleTextBox.Text;
+            string subject = SubjectTextBox.Text;
 
-                string email = Session["email"].ToString();
+            string email = Session["email"].ToString();
 
             QuizServiceReference.QuizServiceClient quizServiceClient = new QuizServiceReference.QuizServiceClient();
 
             Quiz q = new Quiz();
             q.Title = title;
+            q.Subject = subject;
             q.CreatedAt = DateTime.Now;
            
 

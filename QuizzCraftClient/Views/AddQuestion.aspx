@@ -9,13 +9,8 @@
         <div>
             <label for="txtQuestion">Question Text:</label><br />
             <asp:RequiredFieldValidator ID="rfvQuestion" runat="server" ControlToValidate="txtQuestion" ErrorMessage="Question text is required" ForeColor="Red"></asp:RequiredFieldValidator>
-            <br /><asp:TextBox ID="txtQuestion" runat="server" TextMode="MultiLine" Rows="2"></asp:TextBox><br />
-        </div>
-
-        <div>
-            <label for="txtCorrectAnswer">Correct Answer:</label>
-            <asp:RequiredFieldValidator ID="rfvCorrectAnswer" runat="server" ControlToValidate="txtCorrectAnswer" ErrorMessage="Correct answer is required" ForeColor="Red"></asp:RequiredFieldValidator>
-            <br /><asp:TextBox ID="txtCorrectAnswer" runat="server"></asp:TextBox><br />
+            <br /><asp:TextBox ID="txtQuestion" runat="server" TextMode="MultiLine" Rows="2"></asp:TextBox>
+            <br />
         </div>
 
         <div>
@@ -40,6 +35,18 @@
             <label for="txtOptionD">Option D:</label>
             <asp:RequiredFieldValidator ID="rfvOptionD" runat="server" ControlToValidate="txtOptionD" ErrorMessage="Option D is required" ForeColor="Red"></asp:RequiredFieldValidator>
             <br /><asp:TextBox ID="txtOptionD" runat="server"></asp:TextBox><br />
+        </div>
+
+        <br />
+
+        <div>
+            <label for="CorrectAnswer">Correct Answer:</label>
+            <asp:DropDownList ID="CorrectAnswer" runat="server">
+                <asp:ListItem Text="A" Value="A"></asp:ListItem>
+                <asp:ListItem Text="B" Value="B"></asp:ListItem>
+                <asp:ListItem Text="C" Value="C"></asp:ListItem>
+                <asp:ListItem Text="D" Value="D"></asp:ListItem>
+            </asp:DropDownList>
         </div>
         <br />
         <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnAdd_Click" />

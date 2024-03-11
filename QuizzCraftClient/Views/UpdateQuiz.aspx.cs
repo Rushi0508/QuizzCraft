@@ -25,18 +25,20 @@ namespace QuizzCraftClient.Views
                 quiz = quizServiceClient.GetQuiz(qid);
 
                 TitleTextBox.Text = quiz.Title;
+                SubjectTextBox.Text = quiz.Subject;
             }
         }
 
         protected void UpdateQuizButton_Click(object sender, EventArgs e)
         {
             string title = TitleTextBox.Text;
+            string subject = SubjectTextBox.Text;
             
             Quiz quizU = new Quiz();
             qid = int.Parse(Request.QueryString["qid"]);
             quizU.QuizId = qid;
             quizU.Title = title;
-            
+            quizU.Subject = subject;
             QuizServiceReference.QuizServiceClient quizServiceClient = new QuizServiceReference.QuizServiceClient();
             
             string ans = quizServiceClient.UpdateQuiz(quizU);

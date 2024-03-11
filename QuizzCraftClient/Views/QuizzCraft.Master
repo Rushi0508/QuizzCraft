@@ -40,7 +40,7 @@
                 
                 <li class="nav-item">
                     
-                    <asp:LinkButton class="nav-link active" href = "AddQuiz.aspx" ID = "addquiz" runat="server" Visible="">Add Quiz</asp:LinkButton>
+                    <asp:LinkButton class="nav-link active" href = "AddQuiz.aspx" ID = "addquiz" runat="server" Visible="false">Add Quiz</asp:LinkButton>
                 </li>
                 
                 <!-- For Normal User -->
@@ -56,8 +56,19 @@
             <ul class="navbar-nav">
 
                 <li class="nav-item">
-                    <asp:LinkButton class="nav-link" href="MyQuizzes.aspx" ID="quizzes" runat="server" Visible="">My Quizzes</asp:LinkButton>
+                
+                    <asp:Label ID="Q" runat="server" Visible="true" Text="Quizzes : "></asp:Label>
+                    <asp:Label ID="NoOfQuizzes" runat="server" Visible="false" Text=""></asp:Label>
+                    
+                    <asp:Label ID="P" runat="server" Visible="true" Text="Points : "></asp:Label>
+                    <asp:Label ID="Points" runat="server" Visible="false" Text=""></asp:Label>
+                
                 </li>
+
+                <li class="nav-item">
+                    <asp:LinkButton class="nav-link" href="MyQuizzes.aspx" ID="quizzes" runat="server" Visible="false">My Quizzes</asp:LinkButton>
+                </li>
+
 
                 <li class="nav-item">
                     <asp:LinkButton class="nav-link" href="SignIn.aspx" ID="signin" runat="server">SignIn</asp:LinkButton>
@@ -67,7 +78,14 @@
                 </li>
 
                 <li class="nav-item">
-                    <asp:LinkButton class="nav-link" href="Index.aspx" ID="logout" OnClick="logout_Click" Visible="false" runat="server">Logout</asp:LinkButton>
+                    
+                    &nbsp;&nbsp;<asp:Label ID="Email" runat="server" Visible="false" Text=""></asp:Label>
+                       
+                </li>
+
+
+                <li class="nav-item">
+                    <asp:LinkButton class="nav-link" ID="logout" OnClick="logout_Click" Visible="false" runat="server">Logout</asp:LinkButton>
                 </li>
 
             </ul>
