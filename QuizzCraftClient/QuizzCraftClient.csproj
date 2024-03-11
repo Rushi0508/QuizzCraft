@@ -149,6 +149,7 @@
     <Content Include="teacher.png" />
     <Content Include="Views\AddQuestion.aspx" />
     <Content Include="Views\AddQuiz.aspx" />
+    <Content Include="Views\AttemptQuiz.aspx" />
     <Content Include="Views\Index.aspx" />
     <Content Include="Views\MyQuizzes.aspx" />
     <Content Include="Views\QuizQuestions.aspx" />
@@ -199,6 +200,13 @@
     </Compile>
     <Compile Include="Views\AddQuiz.aspx.designer.cs">
       <DependentUpon>AddQuiz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AttemptQuiz.aspx.cs">
+      <DependentUpon>AttemptQuiz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AttemptQuiz.aspx.designer.cs">
+      <DependentUpon>AttemptQuiz.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

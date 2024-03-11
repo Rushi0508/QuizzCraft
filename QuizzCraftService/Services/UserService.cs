@@ -80,6 +80,38 @@ namespace QuizzCraftService.Services
             }
         }
 
+        public string UpdateUser(User user)
+        {
+            try
+            {
+                using (var qc = new QuizzDbContext())
+                {
+                    // Find the existing quiz in the database
+                    var existingUser = qc.Users.Find(user.UserId);
+                    
+
+                    if (existingUser != null)
+                    {
+                        existingUser.Points += user.Points;
+                        existingUser.AttemptedQuizzes += user.AttemptedQuizzes;
+
+                        // Save changes to the database
+                        qc.SaveChanges();
+
+                        return existingUser.Name + "Your Points Updated.";
+                    }
+                    else
+                    {
+                        return "User Not Found";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
         // Assuming that after checking exsistance of mail we do verification 
         public User VerifyUser(string email, string ePassword)
         {

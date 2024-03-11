@@ -42,6 +42,42 @@ namespace QuizzCraftClient.Views
         protected global::System.Web.UI.WebControls.LinkButton addquiz;
 
         /// <summary>
+        /// Q control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Q;
+
+        /// <summary>
+        /// NoOfQuizzes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NoOfQuizzes;
+
+        /// <summary>
+        /// P control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label P;
+
+        /// <summary>
+        /// Points control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Points;
+
+        /// <summary>
         /// quizzes control.
         /// </summary>
         /// <remarks>
@@ -67,6 +103,15 @@ namespace QuizzCraftClient.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton signup;
+
+        /// <summary>
+        /// Email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Email;
 
         /// <summary>
         /// logout control.

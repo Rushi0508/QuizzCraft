@@ -165,6 +165,12 @@ namespace QuizzCraftClient.UserServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserById", ReplyAction="http://tempuri.org/IUserService/GetUserByIdResponse")]
         System.Threading.Tasks.Task<QuizzCraftClient.UserServiceReference.User> GetUserByIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/UpdateUser", ReplyAction="http://tempuri.org/IUserService/UpdateUserResponse")]
+        string UpdateUser(QuizzCraftClient.UserServiceReference.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/UpdateUser", ReplyAction="http://tempuri.org/IUserService/UpdateUserResponse")]
+        System.Threading.Tasks.Task<string> UpdateUserAsync(QuizzCraftClient.UserServiceReference.User user);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -224,6 +230,14 @@ namespace QuizzCraftClient.UserServiceReference {
         
         public System.Threading.Tasks.Task<QuizzCraftClient.UserServiceReference.User> GetUserByIdAsync(int id) {
             return base.Channel.GetUserByIdAsync(id);
+        }
+        
+        public string UpdateUser(QuizzCraftClient.UserServiceReference.User user) {
+            return base.Channel.UpdateUser(user);
+        }
+        
+        public System.Threading.Tasks.Task<string> UpdateUserAsync(QuizzCraftClient.UserServiceReference.User user) {
+            return base.Channel.UpdateUserAsync(user);
         }
     }
 }

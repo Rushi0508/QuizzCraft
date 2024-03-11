@@ -20,6 +20,7 @@ namespace QuizzCraftClient.Views
 
                 ICollection<Question> questionList = questionServiceClient.GetAllQuestionsByQuiz(qid);
 
+                
 
                 // Bind the questionList to the GridView control
                 GridViewQuestions.DataSource = questionList;

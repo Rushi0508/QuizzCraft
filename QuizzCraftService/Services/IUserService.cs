@@ -23,5 +23,9 @@ namespace QuizzCraftService.Services
         [OperationContract]
         User GetUserById(int id);
 
+        [OperationContract]
+        string UpdateUser(User user);
+
+
     }
 }

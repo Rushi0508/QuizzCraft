@@ -25,7 +25,7 @@ namespace QuizzCraftClient.Views
             string b = txtOptionB.Text;
             string c = txtOptionC.Text;
             string d = txtOptionD.Text;
-            string ans = txtCorrectAnswer.Text;
+            string ans = CorrectAnswer.Text;
 
             Question question = new Question();
             question.QuestionText = questionText;
