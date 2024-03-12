@@ -94,7 +94,8 @@ namespace QuizzCraftClient.Views
             user.AttemptedQuizzes = 1;
 
             string u = userServiceClient.UpdateUser(user);
-
+            
+            Response.Redirect("~/Views/AttemptQuiz.aspx?qid=" + qid);
         }
     }
 }

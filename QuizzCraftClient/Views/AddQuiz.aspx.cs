@@ -12,6 +12,11 @@ namespace QuizzCraftClient.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string role = Session["role"]?.ToString();
+            if (role != "teacher")
+            {
+                Response.Redirect("~/Views/Index.aspx");
+            }
 
         }
 
@@ -32,7 +37,8 @@ namespace QuizzCraftClient.Views
 
             string s = quizServiceClient.AddQuiz(q, email);
 
-            Response.Write(s);
+            
+            Response.Redirect("~/Views/MyQuizzes.aspx");
 
         }
     }

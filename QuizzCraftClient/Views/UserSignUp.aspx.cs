@@ -12,6 +12,11 @@ namespace QuizzCraftClient.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string role = Session["role"]?.ToString();
+            if (role != "")
+            {
+                Response.Redirect("~/Views/Index.aspx");
+            }
 
             lblSignUpSuccessfull.Text = "";
             lblSignUpError.Text = "";

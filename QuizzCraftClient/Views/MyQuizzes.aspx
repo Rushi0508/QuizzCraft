@@ -16,7 +16,6 @@
         <div class="col-md-9">
                 <asp:GridView ID="GridViewQuizzes" runat="server" AutoGenerateColumns="False">
         <Columns>
-            <asp:BoundField DataField="QuizId" HeaderText="Quiz Id" />
             <asp:BoundField DataField="Title" HeaderText="Quiz Title" />
             <asp:BoundField DataField="Subject" HeaderText="Quiz Subject" />
 

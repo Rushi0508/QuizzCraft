@@ -146,7 +146,6 @@
     <Content Include="Images\signup.png" />
     <Content Include="Images\student.png" />
     <Content Include="Images\teacher.png" />
-    <Content Include="teacher.png" />
     <Content Include="Views\AddQuestion.aspx" />
     <Content Include="Views\AddQuiz.aspx" />
     <Content Include="Views\AttemptQuiz.aspx" />
