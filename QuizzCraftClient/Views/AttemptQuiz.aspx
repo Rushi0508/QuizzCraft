@@ -1,8 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/QuizzCraft.Master" AutoEventWireup="true" CodeBehind="AttemptQuiz.aspx.cs" Inherits="QuizzCraftClient.Views.AttemptQuiz" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <link rel="stylesheet" type="text/css" href="Style.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
+
+    <asp:Label ID="QuizSubmit" runat="server" ForeColor="Green"  Text=""></asp:Label>
+    
     <asp:GridView ID="GridViewQuestions" runat="server" AutoGenerateColumns="False">
     <Columns>
          <asp:BoundField DataField="QuestionText" HeaderText="Question" />

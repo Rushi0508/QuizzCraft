@@ -18,7 +18,7 @@
 
             <asp:TemplateField HeaderText="Attempt Quiz">
                 <ItemTemplate>
-                    <asp:Button ID="btnAttemptQuiz" runat="server" Text="Attempt" CssClass="attemptButton" CommandName="" OnClick="btnAttemptQuiz_Click" CommandArgument='<%# Eval("QuizId") %>' />
+                    <asp:Button ID="btnAttemptQuiz" runat="server" Text="Attempt" CssClass="addButton" CommandName="" OnClick="btnAttemptQuiz_Click" CommandArgument='<%# Eval("QuizId") %>' />
                 </ItemTemplate>
             </asp:TemplateField>
 

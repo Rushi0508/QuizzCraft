@@ -12,6 +12,13 @@ namespace QuizzCraftClient.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            string role = Session["role"]?.ToString();
+            if (role != "teacher")
+            {
+                Response.Redirect("~/Views/Index.aspx");
+            }
+
             if (!IsPostBack)
             {
                 QuestionServiceReference.QestionServiceClient questionServiceClient = new QuestionServiceReference.QestionServiceClient();
