@@ -38,6 +38,26 @@ namespace QuizzCraftService.Services
             }
         }
 
+        public List<User> GetAllUsers()
+        {
+            try
+            {
+                using (var qc = new QuizzDbContext())
+                {
+                    // Retrieve users from the database sorted by points and then by name
+                    List<User> users = qc.Users.OrderByDescending(u => u.Points).ThenBy(u => u.Name).Take(5).ToList();
+                    return users;
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+
+                return null;
+            }
+
+        }
+
         public User GetUserByEmail(string email)
         {
             try

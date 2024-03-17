@@ -26,6 +26,8 @@ namespace QuizzCraftService.Services
         [OperationContract]
         string UpdateUser(User user);
 
+        [OperationContract]
 
+        List<User> GetAllUsers();
     }
 }

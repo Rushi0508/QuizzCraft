@@ -15,6 +15,15 @@ namespace QuizzCraftClient.Views
     {
 
         /// <summary>
+        /// lblUpdateSuccessfull control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblUpdateSuccessfull;
+
+        /// <summary>
         /// TitleLabel control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,24 @@ namespace QuizzCraftClient.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TitleTextBox;
+
+        /// <summary>
+        /// SubjectLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SubjectLabel;
+
+        /// <summary>
+        /// rfvSubject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSubject;
 
         /// <summary>
         /// SubjectTextBox control.

@@ -55,37 +55,34 @@
 
             <ul class="navbar-nav">
 
-                <li class="nav-item">
+                <li class="nav-item mt-1">
                 
-                    <asp:Label ID="Q" runat="server" Visible="true" Text="Quizzes : "></asp:Label>
-                    <asp:Label ID="NoOfQuizzes" runat="server" Visible="false" Text=""></asp:Label>
+                    <asp:Label ID="Q" runat="server" Visible="false" class="navbar-brand" ForeColor="orange" Text="Quizzes : "></asp:Label>
+                    <asp:Label ID="NoOfQuizzes" runat="server" Visible="false" class="navbar-brand" ForeColor="yellow" Text=""></asp:Label>
                     
-                    <asp:Label ID="P" runat="server" Visible="true" Text="Points : "></asp:Label>
-                    <asp:Label ID="Points" runat="server" Visible="false" Text=""></asp:Label>
-                
+                    <asp:Label ID="P" runat="server" Visible="false" class="navbar-brand" ForeColor="orange"  Text="Points : "></asp:Label>
+                    <asp:Label ID="Points" runat="server" Visible="false" class="navbar-brand" ForeColor="yellow" Text=""></asp:Label>
                 </li>
 
                 <li class="nav-item">
-                    <asp:LinkButton class="nav-link" href="MyQuizzes.aspx" ID="quizzes" runat="server" Visible="false">My Quizzes</asp:LinkButton>
-                </li>
-
-
-                <li class="nav-item">
-                    <asp:LinkButton class="nav-link" href="SignIn.aspx" ID="signin" runat="server">SignIn</asp:LinkButton>
-                </li>
-                <li class="nav-item">
-                    <asp:LinkButton class="nav-link" href="SignUp.aspx" ID="signup" runat="server">SignUp</asp:LinkButton>
-                </li>
-
-                <li class="nav-item">
-                    
-                    &nbsp;&nbsp;<asp:Label ID="Email" runat="server" Visible="false" Text=""></asp:Label>
-                       
+                    <asp:LinkButton class="nav-link active" href="MyQuizzes.aspx" ID="quizzes" runat="server" Visible="false">My Quizzes</asp:LinkButton>
                 </li>
 
 
                 <li class="nav-item">
-                    <asp:LinkButton class="nav-link" ID="logout" OnClick="logout_Click" Visible="false" runat="server">Logout</asp:LinkButton>
+                    <asp:LinkButton class="nav-link active" href="SignIn.aspx" ID="signin" runat="server">SignIn</asp:LinkButton>
+                </li>
+                <li class="nav-item">
+                    <asp:LinkButton class="nav-link active" href="SignUp.aspx" ID="signup" runat="server">SignUp</asp:LinkButton>
+                </li>
+
+                <li class="nav-item mt-1">
+                    &nbsp;&nbsp;<asp:Label ID="Email" runat="server" class="navbar-brand" ForeColor="orange" Visible="false" Text=""></asp:Label>
+                </li>
+
+
+                <li class="nav-item">
+                    <asp:LinkButton class="nav-link active" ID="logout" OnClick="logout_Click" Visible="false" runat="server">Logout</asp:LinkButton>
                 </li>
 
             </ul>

@@ -43,8 +43,8 @@ namespace QuizzCraftClient.Views
             
             string ans = quizServiceClient.UpdateQuiz(quizU);
 
-
-            Response.Redirect("~/Views/MyQuizzes.aspx");
+            lblUpdateSuccessfull.Text = ans;
+            
         }
     }
 }

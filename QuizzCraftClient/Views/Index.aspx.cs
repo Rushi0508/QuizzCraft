@@ -1,4 +1,5 @@
-﻿using QuizzCraftClient.QuizServiceReference;
+﻿    using QuizzCraftClient.QuizServiceReference;
+using QuizzCraftClient.UserServiceReference;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace QuizzCraftClient.Views
         {
             QuizServiceReference.QuizServiceClient quizServiceClient = new QuizServiceReference.QuizServiceClient();
 
+            UserServiceReference.UserServiceClient userServiceClient = new UserServiceReference.UserServiceClient();    
          
             if (!IsPostBack)
             {
@@ -23,6 +25,13 @@ namespace QuizzCraftClient.Views
                 // Bind the quiz list to the GridView
                 GridViewQuizzes.DataSource = quizList;
                 GridViewQuizzes.DataBind();
+
+                
+
+                ICollection<User> topperList = userServiceClient.GetAllUsers();
+
+                GridViewStudents.DataSource = topperList;
+                GridViewStudents.DataBind();
             }
         }
         
