@@ -45,6 +45,8 @@ namespace QuizzCraftClient.Views
 
             questionServiceClient.AddQuestion(question);
 
+            lblCreatedSuccessfull.Text = "Question Added Successfully.";
+
         }
     }
 }

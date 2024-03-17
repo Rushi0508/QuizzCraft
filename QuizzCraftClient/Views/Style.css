@@ -19,30 +19,3 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     vertical-align: top; /* Align the top of the cards */
 }
-
-
-
-.deleteButton {
-    color: white;
-    background-color: red;
-}
-
-.updateButton {
-    color: white;
-    background-color: blue;
-}
-
-.addButton {
-    color: white;
-    background-color: green;
-}
-
-.showButton {
-    color: black;
-    background-color: yellow;
-}
-.attemptButton {
-    color: white;
-    background-color: darkgreen;
-}
-

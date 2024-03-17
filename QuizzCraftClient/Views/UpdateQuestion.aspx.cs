@@ -52,7 +52,8 @@ namespace QuizzCraftClient.Views
 
             questionServiceClient.UpdateQuestion(question);
 
-            Response.Redirect("~/Views/MyQuizzes.aspx");
+            lblUpdateSuccessfull.Text = "Question Udated Successfully.";
+            
         }
     }
 }

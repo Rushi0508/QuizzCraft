@@ -52,6 +52,7 @@ namespace QuizzCraftClient.Views
                         addquiz.Visible = true;
                         quizzes.Visible = true;
 
+                        Q.Visible = true;
                         NoOfQuizzes.Visible = true;
                         NoOfQuizzes.Text = teacher.CreatedQuizzes.ToString();
                         Email.Visible = true;
@@ -79,6 +80,7 @@ namespace QuizzCraftClient.Views
 
                         logout.Visible = true;
 
+                        P.Visible = true;
                         Points.Visible = true;
                         Points.Text = user.Points.ToString();
                         Email.Visible = true;
@@ -104,7 +106,10 @@ namespace QuizzCraftClient.Views
             signin.Visible = true;
             signup.Visible = true;
             logout.Visible = false;
-            
+
+            P.Visible = false;
+            Q.Visible = false;
+
             Response.Redirect("~/Views/Index.aspx");
         }
     }
