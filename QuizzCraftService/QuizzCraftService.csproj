@@ -76,7 +76,7 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuizzDbContext.cs" />
-    <Compile Include="Services\IQestionService.cs" />
+    <Compile Include="Services\IQuestionService.cs" />
     <Compile Include="Services\IQuizService.cs" />
     <Compile Include="Services\IUserService.cs" />
     <Compile Include="Services\ITeacherService.cs" />

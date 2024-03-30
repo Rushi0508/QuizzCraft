@@ -60,6 +60,10 @@
                     <asp:Label ID="Q" runat="server" Visible="false" class="navbar-brand" ForeColor="orange" Text="Quizzes : "></asp:Label>
                     <asp:Label ID="NoOfQuizzes" runat="server" Visible="false" class="navbar-brand" ForeColor="yellow" Text=""></asp:Label>
                     
+
+                    <asp:Label ID="AQ" runat="server" Visible="false" class="navbar-brand" ForeColor="orange"  Text="Attempted Quizzes : "></asp:Label>
+                    <asp:Label ID="AQuizzes" runat="server" Visible="false" class="navbar-brand" ForeColor="yellow" Text=""></asp:Label>
+
                     <asp:Label ID="P" runat="server" Visible="false" class="navbar-brand" ForeColor="orange"  Text="Points : "></asp:Label>
                     <asp:Label ID="Points" runat="server" Visible="false" class="navbar-brand" ForeColor="yellow" Text=""></asp:Label>
                 </li>

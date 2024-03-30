@@ -23,6 +23,12 @@ namespace QuizzCraftService.Models
         public DateTime CreatedAt { get; set; }
 
         [DataMember]
+        public int NumberOfQuestions { get; set; }
+        
+        [DataMember]
+        public int Attendees { get; set; }
+
+        [DataMember]
         public int TeacherId { get; set; }
 
         public ICollection<Question> QuestionList { get; set; }

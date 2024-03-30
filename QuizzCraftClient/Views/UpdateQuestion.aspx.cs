@@ -17,7 +17,7 @@ namespace QuizzCraftClient.Views
         {
             if (!IsPostBack)
             {
-                QuestionServiceReference.QestionServiceClient questionServiceClient = new QuestionServiceReference.QestionServiceClient();
+                QuestionServiceReference.QuestionServiceClient questionServiceClient = new QuestionServiceReference.QuestionServiceClient();
 
                 int quesid = int.Parse(Request.QueryString["quesid"]);
 
@@ -36,7 +36,7 @@ namespace QuizzCraftClient.Views
         protected void btnUpdateQuestion_Click(object sender, EventArgs e)
         {
 
-            QuestionServiceReference.QestionServiceClient questionServiceClient = new QuestionServiceReference.QestionServiceClient();
+            QuestionServiceReference.QuestionServiceClient questionServiceClient = new QuestionServiceReference.QuestionServiceClient();
 
             Question question = new Question();
             int quesid = int.Parse(Request.QueryString["quesid"]);

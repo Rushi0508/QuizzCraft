@@ -67,7 +67,7 @@ namespace QuizzCraftHost
                 userSh.AddServiceEndpoint(typeof(IUserService), userb, usera);
                 teacherSh.AddServiceEndpoint(typeof(ITeacherService), teacherb, teachera);
                 quizSh.AddServiceEndpoint(typeof(IQuizService), quizb, quiza);
-                questionSh.AddServiceEndpoint(typeof(IQestionService), questionb, questiona);
+                questionSh.AddServiceEndpoint(typeof(IQuestionService), questionb, questiona);
 
 
                 userSh.Open();

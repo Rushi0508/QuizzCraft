@@ -171,64 +171,64 @@ namespace QuizzCraftClient.QuestionServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="QuestionServiceReference.IQestionService")]
-    public interface IQestionService {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="QuestionServiceReference.IQuestionService")]
+    public interface IQuestionService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQestionService/AddQuestion", ReplyAction="http://tempuri.org/IQestionService/AddQuestionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionService/AddQuestion", ReplyAction="http://tempuri.org/IQuestionService/AddQuestionResponse")]
         string AddQuestion(QuizzCraftClient.QuestionServiceReference.Question question);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQestionService/AddQuestion", ReplyAction="http://tempuri.org/IQestionService/AddQuestionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionService/AddQuestion", ReplyAction="http://tempuri.org/IQuestionService/AddQuestionResponse")]
         System.Threading.Tasks.Task<string> AddQuestionAsync(QuizzCraftClient.QuestionServiceReference.Question question);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQestionService/GetAllQuestionsByQuiz", ReplyAction="http://tempuri.org/IQestionService/GetAllQuestionsByQuizResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionService/GetAllQuestionsByQuiz", ReplyAction="http://tempuri.org/IQuestionService/GetAllQuestionsByQuizResponse")]
         QuizzCraftClient.QuestionServiceReference.Question[] GetAllQuestionsByQuiz(int quizId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQestionService/GetAllQuestionsByQuiz", ReplyAction="http://tempuri.org/IQestionService/GetAllQuestionsByQuizResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionService/GetAllQuestionsByQuiz", ReplyAction="http://tempuri.org/IQuestionService/GetAllQuestionsByQuizResponse")]
         System.Threading.Tasks.Task<QuizzCraftClient.QuestionServiceReference.Question[]> GetAllQuestionsByQuizAsync(int quizId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQestionService/GetQuestionById", ReplyAction="http://tempuri.org/IQestionService/GetQuestionByIdResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionService/GetQuestionById", ReplyAction="http://tempuri.org/IQuestionService/GetQuestionByIdResponse")]
         QuizzCraftClient.QuestionServiceReference.Question GetQuestionById(int questionId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQestionService/GetQuestionById", ReplyAction="http://tempuri.org/IQestionService/GetQuestionByIdResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionService/GetQuestionById", ReplyAction="http://tempuri.org/IQuestionService/GetQuestionByIdResponse")]
         System.Threading.Tasks.Task<QuizzCraftClient.QuestionServiceReference.Question> GetQuestionByIdAsync(int questionId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQestionService/UpdateQuestion", ReplyAction="http://tempuri.org/IQestionService/UpdateQuestionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionService/UpdateQuestion", ReplyAction="http://tempuri.org/IQuestionService/UpdateQuestionResponse")]
         string UpdateQuestion(QuizzCraftClient.QuestionServiceReference.Question question);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQestionService/UpdateQuestion", ReplyAction="http://tempuri.org/IQestionService/UpdateQuestionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionService/UpdateQuestion", ReplyAction="http://tempuri.org/IQuestionService/UpdateQuestionResponse")]
         System.Threading.Tasks.Task<string> UpdateQuestionAsync(QuizzCraftClient.QuestionServiceReference.Question question);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQestionService/DeleteQuestion", ReplyAction="http://tempuri.org/IQestionService/DeleteQuestionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionService/DeleteQuestion", ReplyAction="http://tempuri.org/IQuestionService/DeleteQuestionResponse")]
         void DeleteQuestion(int questionId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQestionService/DeleteQuestion", ReplyAction="http://tempuri.org/IQestionService/DeleteQuestionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionService/DeleteQuestion", ReplyAction="http://tempuri.org/IQuestionService/DeleteQuestionResponse")]
         System.Threading.Tasks.Task DeleteQuestionAsync(int questionId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IQestionServiceChannel : QuizzCraftClient.QuestionServiceReference.IQestionService, System.ServiceModel.IClientChannel {
+    public interface IQuestionServiceChannel : QuizzCraftClient.QuestionServiceReference.IQuestionService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class QestionServiceClient : System.ServiceModel.ClientBase<QuizzCraftClient.QuestionServiceReference.IQestionService>, QuizzCraftClient.QuestionServiceReference.IQestionService {
+    public partial class QuestionServiceClient : System.ServiceModel.ClientBase<QuizzCraftClient.QuestionServiceReference.IQuestionService>, QuizzCraftClient.QuestionServiceReference.IQuestionService {
         
-        public QestionServiceClient() {
+        public QuestionServiceClient() {
         }
         
-        public QestionServiceClient(string endpointConfigurationName) : 
+        public QuestionServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public QestionServiceClient(string endpointConfigurationName, string remoteAddress) : 
+        public QuestionServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public QestionServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public QuestionServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public QestionServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public QuestionServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         

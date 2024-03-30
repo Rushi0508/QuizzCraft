@@ -74,8 +74,9 @@
                 <h1>List Of All Quizzes</h1>
                 <asp:GridView ID="GridViewQuizzes" runat="server" AutoGenerateColumns="False">
                     <Columns>
-                        <asp:BoundField DataField="QuizId" HeaderText="Quiz Id" />
                         <asp:BoundField DataField="Title" HeaderText="Quiz Title" />
+                        <asp:BoundField DataField="NumberOfQuestions" HeaderText="Number of Questions" />
+                        <asp:BoundField DataField="Attendees" HeaderText="Number of times attending quiz" />
                         <asp:TemplateField HeaderText="Attempt Quiz">
                             <ItemTemplate>
                                 <asp:Button ID="btnAttemptQuiz" runat="server" Text="Attempt" class="btn btn-success" CommandName="" OnClick="btnAttemptQuiz_Click" CommandArgument='<%# Eval("QuizId") %>' />

@@ -60,7 +60,21 @@
     <asp:Label ID="QuizSubmit" runat="server" ForeColor="Green" Text=""></asp:Label>
 
     <div class="container">
-        <h1>Questions </h1>
+        <div class="row my-3">
+
+            <div class="col-4">
+                <asp:Label ID="label" class="fs-3" runat="server" Text="Name : "></asp:Label>
+                <asp:Label ID="qtitle" class="fs-4 text-white bg-primary" runat="server"></asp:Label>
+            </div>
+            <div class="col-4">
+                <asp:Label ID="pagetitle" runat="server" class="fs-2" Text="Questions"></asp:Label>
+            </div>
+            <div class="col-4">
+                <asp:Label ID="subjectlabel" class="fs-3" runat="server" Text="Subject : "></asp:Label>
+                <asp:Label ID="qsubject" class="fs-4 text-white bg-success" runat="server"></asp:Label>
+            </div>
+        </div>
+
         <asp:GridView ID="GridViewQuestions" runat="server" AutoGenerateColumns="False" CssClass="gridview">
             <Columns>
                 <asp:BoundField DataField="QuestionText" HeaderText="Question" />
@@ -87,6 +101,6 @@
             </Columns>
         </asp:GridView>
 
-       <asp:Button ID="btnSubmit" runat="server" Text="Submit" Visible="false" class="btn btn-success" OnClick="btnSubmitQuiz_Click" />
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" Visible="false" class="btn btn-success" OnClick="btnSubmitQuiz_Click" />
     </div>
 </asp:Content>

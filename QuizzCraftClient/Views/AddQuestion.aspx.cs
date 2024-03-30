@@ -1,5 +1,6 @@
 ﻿using Microsoft.SqlServer.Server;
 using QuizzCraftClient.QuestionServiceReference;
+using QuizzCraftClient.QuizServiceReference;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,9 +42,20 @@ namespace QuizzCraftClient.Views
             question.QuizId = qid;
             question.CorrectAnswer = ans;
 
-            QuestionServiceReference.QestionServiceClient questionServiceClient = new QuestionServiceReference.QestionServiceClient();
+            QuestionServiceReference.QuestionServiceClient questionServiceClient = new QuestionServiceReference.QuestionServiceClient();
 
             questionServiceClient.AddQuestion(question);
+
+
+            // Increament Number of Questions in Quiz 
+            QuizServiceReference.QuizServiceClient quizServiceClient = new QuizServiceReference.QuizServiceClient();
+
+            Quiz quiz = quizServiceClient.GetQuiz(qid);
+
+            quiz.NumberOfQuestions = quiz.NumberOfQuestions + 1;
+
+            quizServiceClient.UpdateQuiz(quiz);
+
 
             lblCreatedSuccessfull.Text = "Question Added Successfully.";
 

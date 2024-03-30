@@ -1,4 +1,5 @@
 ﻿using QuizzCraftClient.QuestionServiceReference;
+using QuizzCraftClient.QuizServiceReference;
 using QuizzCraftClient.UserServiceReference;
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,20 @@ namespace QuizzCraftClient.Views
         {
             if (!IsPostBack)
             {
-                QuestionServiceReference.QestionServiceClient questionServiceClient = new QuestionServiceReference.QestionServiceClient();
+                QuestionServiceReference.QuestionServiceClient questionServiceClient = new QuestionServiceReference.QuestionServiceClient();
+                QuizServiceReference.QuizServiceClient quizServiceClient = new QuizServiceReference.QuizServiceClient();
 
                 int qid = int.Parse(Request.QueryString["qid"]);
+
+                Quiz quiz = quizServiceClient.GetQuiz(qid);
+
+                string quizTitle = quiz.Title;
+                string quizSubject = quiz.Subject;
+
+                qtitle.Text = quizTitle;
+                qsubject.Text = quizSubject;
+
+
 
                 string userRole = Session["role"]?.ToString();
 
@@ -39,7 +51,7 @@ namespace QuizzCraftClient.Views
         {
             char ans;
             List<char> selectedOptions = new List<char>();
-            QuestionServiceReference.QestionServiceClient questionServiceClient = new QuestionServiceReference.QestionServiceClient();
+            QuestionServiceReference.QuestionServiceClient questionServiceClient = new QuestionServiceReference.QuestionServiceClient();
             UserServiceReference.UserServiceClient userServiceClient = new UserServiceReference.UserServiceClient();
 
 
@@ -94,6 +106,15 @@ namespace QuizzCraftClient.Views
             user.AttemptedQuizzes = 1;
 
             string u = userServiceClient.UpdateUser(user);
+
+            // Update Attendees in Quiz 
+            QuizServiceReference.QuizServiceClient quizServiceClient = new QuizServiceReference.QuizServiceClient();
+
+            Quiz quiz = quizServiceClient.GetQuiz(qid);
+
+            quiz.Attendees = quiz.Attendees + 1;
+
+            quizServiceClient.UpdateQuiz(quiz);
             
             Response.Redirect("~/Views/AttemptQuiz.aspx?qid=" + qid);
         }

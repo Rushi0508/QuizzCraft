@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace QuizzCraftService.Services
 {
     [ServiceContract]
-    public interface IQestionService
+    public interface IQuestionService
     {
         [OperationContract]
         string AddQuestion(Question question);

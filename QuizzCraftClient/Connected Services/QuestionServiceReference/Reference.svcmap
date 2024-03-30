@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="40604c75-6199-46a8-872a-f1f3541e9493" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="8a8f1161-4735-4fe4-8f6d-b9732f837661" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="net.tcp://localhost:8000/QuestionService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="4ddc91c4-5a4d-490c-8a17-ec50e476a7f9" SourceId="1" SourceUrl="net.tcp://localhost:8000/QuestionService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="5241b815-3407-4d64-9e7e-03b684051c60" SourceId="1" SourceUrl="net.tcp://localhost:8000/QuestionService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="23b065bd-67ab-44bd-b908-460ce45c1ef4" SourceId="1" SourceUrl="net.tcp://localhost:8000/QuestionService/mex" />
-    <MetadataFile FileName="QuizzCraftService.Models.xsd" MetadataType="Schema" ID="01cfc95a-74ba-4906-bc51-0cf14bf9b5f7" SourceId="1" SourceUrl="net.tcp://localhost:8000/QuestionService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="9e63439a-a7a9-460f-93f2-f76ce5c25d35" SourceId="1" SourceUrl="net.tcp://localhost:8000/QuestionService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="0368d812-dcd6-47f3-b4c1-bfe713e35644" SourceId="1" SourceUrl="net.tcp://localhost:8000/QuestionService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="4738434a-1cb5-41c4-92c4-4f31689e0b55" SourceId="1" SourceUrl="net.tcp://localhost:8000/QuestionService/mex" />
+    <MetadataFile FileName="QuizzCraftService.Models.xsd" MetadataType="Schema" ID="1a49cf25-c07f-417f-9c33-4cc2d81177bd" SourceId="1" SourceUrl="net.tcp://localhost:8000/QuestionService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
