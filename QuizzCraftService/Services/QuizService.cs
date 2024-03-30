@@ -172,7 +172,13 @@ namespace QuizzCraftService.Services
                         // Update the properties of the existing quiz
                         existingQuiz.Title = quiz.Title;
                         existingQuiz.Subject = quiz.Subject;
+
                         // Update other properties as needed
+                        if(quiz.Attendees != 0)
+                            existingQuiz.Attendees = quiz.Attendees;
+                        if(quiz.NumberOfQuestions != 0)
+                            existingQuiz.NumberOfQuestions = quiz.NumberOfQuestions;
+
 
                         // Save changes to the database
                         qc.SaveChanges();

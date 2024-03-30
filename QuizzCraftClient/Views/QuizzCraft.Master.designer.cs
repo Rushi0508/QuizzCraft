@@ -60,6 +60,24 @@ namespace QuizzCraftClient.Views
         protected global::System.Web.UI.WebControls.Label NoOfQuizzes;
 
         /// <summary>
+        /// AQ control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AQ;
+
+        /// <summary>
+        /// AQuizzes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AQuizzes;
+
+        /// <summary>
         /// P control.
         /// </summary>
         /// <remarks>

@@ -76,27 +76,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\QuestionServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\QuestionServiceReference\configuration.svcinfo" />
     <Content Include="Connected Services\QuestionServiceReference\QuizzCraftClient.QuestionServiceReference.Question.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\QuestionServiceReference\QuizzCraftService.Models.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\QuestionServiceReference\service.wsdl" />
-    <None Include="Connected Services\QuestionServiceReference\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\QuestionServiceReference\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\QuizServiceReference\configuration91.svcinfo" />
-    <None Include="Connected Services\QuizServiceReference\configuration.svcinfo" />
-    <None Include="Connected Services\QuestionServiceReference\configuration91.svcinfo" />
-    <None Include="Connected Services\QuestionServiceReference\configuration.svcinfo" />
     <None Include="Connected Services\QuestionServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\QuizServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\QuizServiceReference\configuration.svcinfo" />
     <Content Include="Connected Services\QuizServiceReference\QuizzCraftClient.QuizServiceReference.Quiz.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -104,28 +94,14 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\TeacherServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\TeacherServiceReference\configuration.svcinfo" />
     <Content Include="Connected Services\TeacherServiceReference\QuizzCraftClient.TeacherServiceReference.Teacher.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\QuizServiceReference\QuizzCraftService.Models.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\QuizServiceReference\service.wsdl" />
-    <None Include="Connected Services\QuizServiceReference\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\QuizServiceReference\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\TeacherServiceReference\QuizzCraftService.Models.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\TeacherServiceReference\service.wsdl" />
-    <None Include="Connected Services\TeacherServiceReference\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\TeacherServiceReference\service1.xsd">
-      <SubType>Designer</SubType>
+    <None Include="Connected Services\TeacherServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Connected Services\UserServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\UserServiceReference\configuration.svcinfo" />
@@ -133,12 +109,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\UserServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\TeacherServiceReference\configuration91.svcinfo" />
-    <None Include="Connected Services\TeacherServiceReference\configuration.svcinfo" />
-    <None Include="Connected Services\TeacherServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -295,6 +265,36 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\QuestionServiceReference\QuizzCraftService.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\QuestionServiceReference\service.wsdl" />
+    <None Include="Connected Services\QuestionServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\QuestionServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\QuizServiceReference\QuizzCraftService.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\QuizServiceReference\service.wsdl" />
+    <None Include="Connected Services\QuizServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\QuizServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TeacherServiceReference\QuizzCraftService.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TeacherServiceReference\service.wsdl" />
+    <None Include="Connected Services\TeacherServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TeacherServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\UserServiceReference\QuizzCraftService.Models.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -322,7 +322,6 @@
     <WCFMetadataStorage Include="Connected Services\TeacherServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\UserServiceReference\" />
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

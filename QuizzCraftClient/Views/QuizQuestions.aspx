@@ -53,7 +53,21 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="container">
-        <h1>List of Questions </h1>
+
+        <div class="row my-3">
+
+            <div class="col-4">
+                <asp:Label ID="label" class="fs-3" runat="server" Text="Name : "></asp:Label>
+                <asp:Label ID="qtitle" class="fs-4 text-white bg-primary" runat="server"></asp:Label>
+            </div>
+            <div class="col-4">
+                <asp:Label ID="pagetitle" runat="server" class="fs-2" Text="List of Questions"></asp:Label>
+            </div>
+            <div class="col-4">
+                <asp:Label ID="subjectlabel" class="fs-3" runat="server" Text="Subject : "></asp:Label>
+                <asp:Label ID="qsubject" class="fs-4 text-white bg-success" runat="server"></asp:Label>
+            </div>
+        </div>
 
         <asp:GridView ID="GridViewQuestions" runat="server" AutoGenerateColumns="False" CssClass="gridview">
             <Columns>
@@ -62,10 +76,16 @@
                 <asp:BoundField DataField="OptionB" HeaderText="Option B" />
                 <asp:BoundField DataField="OptionC" HeaderText="Option C" />
                 <asp:BoundField DataField="OptionD" HeaderText="Option D" />
-                <asp:BoundField DataField="CorrectAnswer" HeaderText="Correct Answer" />
-                <asp:TemplateField HeaderText="Actions On Question">
+                <asp:BoundField DataField="CorrectAnswer" HeaderText="Correct Answer : Option" />
+                <asp:TemplateField HeaderText="Update Question">
                     <ItemTemplate>
                         <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn updateButton" CommandName="UpdateRow" CommandArgument='<%# Eval("QuestionID") %>' OnClick="btnUpdateQuestion_Click" />
+
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Delete Question">
+                    <ItemTemplate>
+
                         <asp:Button ID="btnDelete" runat="server" Text="Delete" CssClass="btn deleteButton" CommandName="DeleteRow" CommandArgument='<%# Eval("QuestionID") %>' OnClick="btnDeleteQuestion_Click" />
                     </ItemTemplate>
                 </asp:TemplateField>

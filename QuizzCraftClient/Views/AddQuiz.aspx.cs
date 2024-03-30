@@ -38,7 +38,9 @@ namespace QuizzCraftClient.Views
             string s = quizServiceClient.AddQuiz(q, email);
 
             lblCreatedSuccessfull.Text = "Quiz Created Successfully.";
-           
+
+            Response.Redirect("~/Views/MyQuizzes.aspx");
+
         }
     }
 }

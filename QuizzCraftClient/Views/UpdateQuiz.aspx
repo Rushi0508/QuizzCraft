@@ -18,7 +18,7 @@
                             </div>
                         </div>
 
-                        <h3 class="text-center">Add Quiz Details</h3>
+                        <h3 class="text-center">Update Quiz Details</h3>
                         <center>
 
                             <asp:Label ID="lblUpdateSuccessfull" runat="server" ForeColor="Green"></asp:Label>

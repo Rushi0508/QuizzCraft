@@ -22,9 +22,6 @@ namespace QuizzCraftService.Models
         [DataMember]
         public string Password { get; set; }
         
-        /*
-        public ICollection<Quiz> AttemptedQuizzes { get; set; }*/
-
         
         [DataMember]
         public int AttemptedQuizzes { get; set; }

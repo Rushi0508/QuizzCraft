@@ -83,6 +83,11 @@ namespace QuizzCraftClient.Views
                         P.Visible = true;
                         Points.Visible = true;
                         Points.Text = user.Points.ToString();
+
+                        AQ.Visible = true;
+                        AQuizzes.Visible = true;
+                        AQuizzes.Text = user.AttemptedQuizzes.ToString();
+                        
                         Email.Visible = true;
                         Email.Text = email;
 

@@ -23,7 +23,13 @@ namespace QuizzCraftClient.QuizServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AttendeesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime CreatedAtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int NumberOfQuestionsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int QuizIdField;
@@ -48,6 +54,19 @@ namespace QuizzCraftClient.QuizServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Attendees {
+            get {
+                return this.AttendeesField;
+            }
+            set {
+                if ((this.AttendeesField.Equals(value) != true)) {
+                    this.AttendeesField = value;
+                    this.RaisePropertyChanged("Attendees");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime CreatedAt {
             get {
                 return this.CreatedAtField;
@@ -56,6 +75,19 @@ namespace QuizzCraftClient.QuizServiceReference {
                 if ((this.CreatedAtField.Equals(value) != true)) {
                     this.CreatedAtField = value;
                     this.RaisePropertyChanged("CreatedAt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int NumberOfQuestions {
+            get {
+                return this.NumberOfQuestionsField;
+            }
+            set {
+                if ((this.NumberOfQuestionsField.Equals(value) != true)) {
+                    this.NumberOfQuestionsField = value;
+                    this.RaisePropertyChanged("NumberOfQuestions");
                 }
             }
         }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuizzCraftService.Services
 {
-    public class QuestionService : IQestionService
+    public class QuestionService : IQuestionService
     {
         public string AddQuestion(Question question)
         {

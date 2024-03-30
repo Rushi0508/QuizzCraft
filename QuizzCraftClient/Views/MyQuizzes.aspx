@@ -72,17 +72,19 @@
     <h1>My Quizzes</h1>
 
 
-    <div class="container">
+    <div class="container" style="text-align: right;">
     <asp:Button ID="btnAddQuiz" runat="server" Text="Add Quiz" class="btn btn-success" PostBackUrl="AddQuiz.aspx"/>
     <br>
     <br>
 
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-12">
                 <asp:GridView ID="GridViewQuizzes" runat="server" AutoGenerateColumns="False">
         <Columns>
             <asp:BoundField DataField="Title" HeaderText="Quiz Title" />
             <asp:BoundField DataField="Subject" HeaderText="Quiz Subject" />
+            <asp:BoundField DataField="NumberOfQuestions" HeaderText="Number of Questions" />
+            <asp:BoundField DataField="Attendees" HeaderText="Attendees" />
 
             <asp:TemplateField HeaderText="Update Quiz">
                 <ItemTemplate>
@@ -104,7 +106,7 @@
 
             <asp:TemplateField HeaderText="Add Question">
                 <ItemTemplate>
-                    <asp:Button ID="btnAddQuestion" runat="server" Text="Add" class="btn btn-success" CommandName="" OnClick="btnAddQuestion_Click" CommandArgument='<%# Eval("QuizId") %>' />
+                    <asp:Button ID="btnAddQuestion" runat="server" Text="Add Question" class="btn btn-success" CommandName="" OnClick="btnAddQuestion_Click" CommandArgument='<%# Eval("QuizId") %>' />
                 </ItemTemplate>
             </asp:TemplateField>
 

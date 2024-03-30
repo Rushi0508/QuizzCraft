@@ -1,4 +1,5 @@
 ﻿using QuizzCraftClient.QuestionServiceReference;
+using QuizzCraftClient.QuizServiceReference;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +22,19 @@ namespace QuizzCraftClient.Views
 
             if (!IsPostBack)
             {
-                QuestionServiceReference.QestionServiceClient questionServiceClient = new QuestionServiceReference.QestionServiceClient();
+                QuestionServiceReference.QuestionServiceClient questionServiceClient = new QuestionServiceReference.QuestionServiceClient();
+
+                QuizServiceReference.QuizServiceClient quizServiceClient = new QuizServiceReference.QuizServiceClient();
+
 
                 int qid = int.Parse(Request.QueryString["qid"]);
+
+                Quiz quiz = quizServiceClient.GetQuiz(qid);
+
+                string quizTitle = quiz.Title;
+                string quizSubject = quiz.Subject;
+                qtitle.Text = quizTitle;
+                qsubject.Text = quizSubject;
 
                 ICollection<Question> questionList = questionServiceClient.GetAllQuestionsByQuiz(qid);
 
@@ -37,7 +48,7 @@ namespace QuizzCraftClient.Views
 
         protected void btnUpdateQuestion_Click(object sender, EventArgs e)
         {
-            QuestionServiceReference.QestionServiceClient questionServiceClient = new QuestionServiceReference.QestionServiceClient();
+            QuestionServiceReference.QuestionServiceClient questionServiceClient = new QuestionServiceReference.QuestionServiceClient();
 
             Button btnUpdate = (Button)sender;
             int questionId = int.Parse(btnUpdate.CommandArgument);
@@ -48,12 +59,24 @@ namespace QuizzCraftClient.Views
         }
         protected void btnDeleteQuestion_Click(object sender, EventArgs e)
         {
-            QuestionServiceReference.QestionServiceClient questionServiceClient = new QuestionServiceReference.QestionServiceClient();
+            QuestionServiceReference.QuestionServiceClient questionServiceClient = new QuestionServiceReference.QuestionServiceClient();
 
             Button btnDelete = (Button)sender;
             int questionId = int.Parse(btnDelete.CommandArgument);
 
             questionServiceClient.DeleteQuestion(questionId);
+
+
+            // Decrease Number of Questions from Quiz 
+            QuizServiceReference.QuizServiceClient quizServiceClient = new QuizServiceReference.QuizServiceClient();
+
+            int qid = int.Parse(Request.QueryString["qid"]);
+
+            Quiz quiz = quizServiceClient.GetQuiz(qid);
+
+            quiz.NumberOfQuestions = quiz.NumberOfQuestions - 1;
+
+            quizServiceClient.UpdateQuiz(quiz);
 
             Response.Redirect("~/Views/MyQuizzes.aspx"); 
         }
